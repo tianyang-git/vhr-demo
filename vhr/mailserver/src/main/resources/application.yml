@@ -1,0 +1,32 @@
+spring:
+  mail:
+    host: smtp.163.com
+    username:
+    password:
+    port:
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+          ssl:
+            enable: true
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        debug: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 100
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+server:
+  port: 8082
